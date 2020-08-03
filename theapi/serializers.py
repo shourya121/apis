@@ -5,26 +5,26 @@ from rest_framework.serializers import SerializerMethodField
 class CountrySerializer(serializers.ModelSerializer):
     class Meta():
         model=Country
-        fields=('Name','Description','GDP','Population')
+        fields=('id','Name','Description','GDP','Population')
 
 
 class StateSerializer(serializers.ModelSerializer):
 
     class Meta():
         model=State
-        fields=('Country','Name','Description','GDP','Population')
+        fields=('id','Country','Name','Description','GDP','Population')
 
 class CitySerializer(serializers.ModelSerializer):
 
     class Meta():
         model=City
-        fields=('State','Country','Description','GDP','Population','PinCode')
+        fields=('id','State','Country','Description','GDP','Population','PinCode')
 
 class TownSerializer(serializers.ModelSerializer):
 
     class Meta():
         model=Town
-        fields=('State','Country','Description','GDP','Population','PinCode')
+        fields=('id','State','Country','Description','GDP','Population','PinCode')
 
 class PersonSerializer(serializers.ModelSerializer):
     class Meta():
